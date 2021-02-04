@@ -1,0 +1,256 @@
+body {
+    margin: 0 auto;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+}
+
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+}
+
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+}
+
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+
+.menu__item:hover {
+    background-color: #CFD8DC;
+}
+
+.flex-box-head {
+    margin: 0 0 0px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.city-selector {
+    border: none;
+    font-size: 1em;
+    font-style: normal;
+    margin-top: 3px;
+    color: #616161;
+    outline: none;
+}
+
+.nav-filter {
+    display: flex;
+}
+
+.filter-link {
+    text-decoration: none;
+    color: #616161;
+    font-size: 1em;
+}
+
+.offers {
+    padding: 30px 0 30px 0;
+    display: flex;
+    justify-content: space-evenly;
+    background-image: url(../src/img/bg.jpg);
+    background-size: cover;
+}
+
+.offer-link {
+    border: 1px solid #616161;
+    background-color: #fff;
+    border-radius: 5%;
+    margin: 5px;
+    padding: 3px;
+    text-decoration: none;
+    text-align: center;
+    color: #616161;
+    font-size: 0.8em;
+    width: 130px;
+}
+
+.offer-link:hover {
+    background-color: #7192b6;
+}
+
+.offer-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.offer-box-heading {
+    margin: 10px auto;
+    text-align: left;
+    color: #555555;
+}
+
+.offer-box-more {
+    margin: 10px 0 0 0;
+    text-decoration: none;
+    color: #555555;
+    text-align: right;
+    font-size: 0.8em;
+}
+
+.photo-flexbox {
+    margin: 15px 5px 15px 5px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.photo {
+    border: 3px solid grey;
+    border-radius: 50%;
+}
+
+.photo:hover {
+    filter: brightness(50%);
+}
+
+.photo1:hover {
+    border: 3px solid #7192b6;
+}
+
+.photo2:hover {
+    border: 3px solid #fff;
+}
+
+.projects-text {
+    text-align: center;
+    font-size: 0.8em;
+    margin: 10px 5px 0 5px;
+    color: #616161;
+}
+
+.prj-txt2 {
+    color: #555555;
+}
+
+.wrp {
+    padding-bottom: 15px;
+}
+
+.wrp2 {
+    background-color: #7192b6;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 20px 0 20px 0;
+}
+
+.service {
+    text-align: center;
+    margin: 5px;
+    padding: 10px 5px;
+    text-decoration: none;
+    background-color: #dadde3;
+    color: #555555;
+}
+
+.service:hover {
+    background-color: #7192b6;
+    color: #fff;
+}
+
+.footer {
+    height: 111px;
+    display: flex;
+    background-color: #111111;
+}
+
+.left-footer,
+.right-footer {
+    margin: auto auto;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 300;
+    color: #555555;
+}
+
+.contacts {
+    color: #555555;
+}
+
+.designer {
+    color: #555555;
+}
